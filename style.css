@@ -1,0 +1,134 @@
+html,
+body {
+    font-family: 'Raleway', sans-serif;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    background-image: url('assets/circuit-board.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/* main */
+
+.card {
+    margin: 50px auto;
+    width: 90%;
+    max-width: 350px;
+    height: 500px;
+    background-color: #f5f5f5;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    box-shadow: 0 16px 28px 0 rgba(0, 0, 0, .82), 0 25px 55px 0 rgba(0, 0, 0, .81);
+    padding: 20px 5px;
+}
+
+.card:hover {
+    box-shadow: 0 27px 24px 0 rgba(0, 0, 0, .7), 0 40px 77px 0 rgba(0, 0, 0, .72);
+}
+
+.card-image {
+    background-image: url('assets/avatar.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    margin: 10px auto;
+}
+
+.card-content {
+    color: #808080;
+    text-transform: uppercase;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 0.3s forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.card-footer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    text-align: center;
+    opacity: 0;
+    animation: slideRight 1s ease-in-out 1s forwards;
+}
+
+@keyframes slideRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.card-footer a {
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+.card-footer a:hover {
+    cursor: pointer;
+}
+
+.icon {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+}
+
+.linkedin {
+    background-image: url('assets/linkedin.svg');
+}
+
+.github {
+    background-image: url('assets/github.svg')
+}
+
+.resume {
+    background-image: url('assets/resume.svg');
+}
+
+
+/* footer */
+
+.note {
+    font-family: Courier;
+    color: #fff;
+    z-index: 10;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+
+/* media queries */
+
+@media only screen and (min-width: 375px) {
+    .wrapper {
+        position: absolute;
+        min-height: 100vh;
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-rows: 1fr auto;
+        grid-template-columns: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
